@@ -35,7 +35,7 @@
     </nav>
   </header>
   <meta charset="UTF-8">
-  <title>💃 Para do Tańca</title>
+  <title>Para do Tańca</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -229,6 +229,13 @@
       </div>
     </div>
   </section>
+  <div class="login">
+    <form action="logowanie.php" method="POST">
+      Login: <br><input type="text" name="login"><br>
+      Hasło: <br><input type="password" name="password"><br><br>
+      <input type="submit" value="Zaloguj się">
+    </form>
+  </div>
   <footer>
     <div class="container">
       <div class="row">
