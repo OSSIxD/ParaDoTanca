@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <partial src="exampleIncludeFile.html" />
-
 <head>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <header>
@@ -229,13 +228,6 @@
       </div>
     </div>
   </section>
-  <div class="login">
-    <form action="logowanie.php" method="POST">
-      Login: <br><input type="text" name="login"><br>
-      Hasło: <br><input type="password" name="password"><br><br>
-      <input type="submit" value="Zaloguj się">
-    </form>
-  </div>
   <footer>
     <div class="container">
       <div class="row">
