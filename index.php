@@ -203,25 +203,25 @@
       </div>
       <div class="row clearfix">
         <div class="offset-sm-2 col-sm-8">
-          <form>
+          <form class="contact-form" action="contactform.php" method="post">
             <div class="form-group">
               <label>Imię</label>
-              <input type="text" name="" class="form-control">
+              <input type="text" name="name" class="form-control" placeholder="Pełne imię">
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="text" name="" class="form-control">
+              <input type="text" name="mail" class="form-control" placeholder="Twój e-mail">
             </div>
             <div class="form-group">
               <label>Telefon</label>
-              <input type="text" name="" class="form-control">
+              <input type="text" name="subject" class="form-control" placeholder="Numer">
             </div>
             <div class="form-group">
               <label>Wiadomość</label>
-              <textarea class="form-control textarea" name=""></textarea>
+              <textarea class="form-control textarea" name="message" placeholder="Wiadomość"></textarea>
             </div>
             <div class="form-group text-center">
-              <button class="btn btnD1">Wyślij</button>
+              <button type="submit" name="submit" class="btn btnD1">Wyślij</button>
             </div>
           </form>
         </div>
