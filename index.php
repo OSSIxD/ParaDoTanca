@@ -70,24 +70,24 @@
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>01</h2>
-                <h3>Wybór jeden</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>Wesela</h3>
+                <p>Jeżeli chcesz zobaczyć wszystki dostępne na razie możliwości naszej firmy, to naciśnij przycisk "Więcej" i ciesz się profesjonalnymi imprezami na każdą okazję!</p>
                 <a href="Opcje.php">Więcej</a>
               </div>
             </div>
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>02</h2>
-                <h3>Wybór dwa</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>Osiemnastki</h3>
+                <p>Jeżeli chcesz zobaczyć wszystki dostępne na razie możliwości naszej firmy, to naciśnij przycisk "Więcej" i ciesz się profesjonalnymi imprezami na każdą okazję!</p>
                 <a href="Opcje.php">Więcej</a>
               </div>
             </div>
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>03</h2>
-                <h3>Wybór trzy</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>Firmowe</h3>
+                <p>Jeżeli chcesz zobaczyć wszystki dostępne na razie możliwości naszej firmy, to naciśnij przycisk "Więcej" i ciesz się profesjonalnymi imprezami na każdą okazję!</p>
                 <a href="Opcje.php">Więcej</a>
               </div>
             </div>
