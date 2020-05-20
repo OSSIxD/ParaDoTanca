@@ -70,25 +70,25 @@
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>01</h2>
-                <h3>Service One</h3>
+                <h3>Wybór jeden</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Read More</a>
+                <a href="#">Więcej</a>
               </div>
             </div>
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>02</h2>
-                <h3>Service Two</h3>
+                <h3>Wybór dwa</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Read More</a>
+                <a href="#">Więcej</a>
               </div>
             </div>
             <div class="box1">
               <div class="content1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <h2>03</h2>
-                <h3>Service Three</h3>
+                <h3>Wybór trzy</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Read More</a>
+                <a href="#">Więcej</a>
               </div>
             </div>
           </div>
