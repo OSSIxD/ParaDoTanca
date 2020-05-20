@@ -1,0 +1,145 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #060c21;
+}
+.contentBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.contentBox h1 {
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+.contentBox p {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.container{
+  padding: 0 250px 0;
+}
+.container1 {
+  padding-left: 0 200px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 0 40px;
+}
+
+.container1 .box1 {
+  position: relative;
+  height: 400px;
+  background: #060c21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.container1 .box1::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  transform: skew(2deg, 2deg);
+  z-index: -1;
+}
+
+.container1 .box1:nth-child(1)::before {
+  background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container1 .box1:nth-child(2)::before {
+  background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container1 .box1:nth-child(3)::before {
+  background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container1 .box1:nth-child(4)::before {
+  background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.container1 .box1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+.content1 {
+  position: relative;
+  padding: 20px;
+}
+
+.box1 .content1 h2 {
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: rgba(255, 255, 255, .05);
+  transition: 0.5s;
+}
+
+.box1:hover .content1 h2 {
+  top: -140px;
+}
+
+.box1 .content1 h3 {
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.box1 .content1 p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.box1 .content1 a {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box1:hover .content1 a {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.box1 .content1 a:hover {
+  color: #000;
+  background: #fff;
+}
