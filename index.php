@@ -14,19 +14,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-lg-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Główna<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#glowna">Główna<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#explore">Oferta</a>
+              <a class="nav-link" href="#oferta">Oferta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#adventure">O Nas</a>
+              <a class="nav-link" href="#o-nas">O Nas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Kontakt</a>
+              <a class="nav-link" href="#kontakt">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -41,7 +41,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div class="jumbotron jumbotron-fluid height100p banner" id="home">
+  <div class="jumbotron jumbotron-fluid height100p banner" id="glowna">
     <div class="container h100">
       <div class="contentBox h100">
         <div>
@@ -52,7 +52,7 @@
       </div>
     </div>
   </div>
-  <section class="sec1" id="explore">
+  <section class="sec1" id="oferta">
     <div class="container">
       <div class="row">
         <div class="offset-sm-2 col-sm-8">
@@ -72,7 +72,7 @@
                 <h2>01</h2>
                 <h3>Wybór jeden</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Więcej</a>
+                <a href="Opcje.php">Więcej</a>
               </div>
             </div>
             <div class="box1">
@@ -80,7 +80,7 @@
                 <h2>02</h2>
                 <h3>Wybór dwa</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Więcej</a>
+                <a href="Opcje.php">Więcej</a>
               </div>
             </div>
             <div class="box1">
@@ -88,14 +88,14 @@
                 <h2>03</h2>
                 <h3>Wybór trzy</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Więcej</a>
+                <a href="Opcje.php">Więcej</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <section class="sec2" id="adventure">
+  <section class="sec2" id="o-nas">
     <div class="container h100">
       <div class="contentBox h100">
         <div>
@@ -103,16 +103,13 @@
           <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów
             Zjednoczonych przez około 10 tys. lat. Przed przybyciem Europejczyków i, co za tym idzie, sprowadzeniu siłowo przez nich na te ziemie pojmanych w Afryce Zachodniej i zniewolonych Afrykanów do pracy na plantacjach, populacja autochtonów
             stanowiła ponad 1 mln mieszkańców.</p>
-          <a href="#">
-            <div class="wrapper">
-              <div class="btn1">
-                <button class="button1" type="button">Więcej</button>
+                <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                  <div class="moving"><svg><rect></rect></svg>Więcej
               </div>
-            </div>
-          </a>
+              </a>
+              </div>
         </div>
       </div>
-    </div>
   </section>
   <section class="blog" id="blog">
     <div class="container">
@@ -136,7 +133,7 @@
             <div class="content">
               <h1>Zróżnicowane językowo i kulturowo</h1>
               <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#" class="btn btnD2">Więcej</a>
+              <a href="#"><button class="button1" type="button">Więcej</button></a>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -151,7 +148,7 @@
             <div class="content">
               <h1>Zróżnicowane językowo i kulturowo</h1>
               <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#" class="btn btnD2">Więcej</a>
+              <a href="#"><button class="button1" type="button">Więcej</button></a>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -166,7 +163,7 @@
             <div class="content">
               <h1>Zróżnicowane językowo i kulturowo</h1>
               <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#" class="btn btnD2">Więcej</a>
+              <a href="#"><button class="button1" type="button">Więcej</button></a>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -181,7 +178,7 @@
             <div class="content">
               <h1>Zróżnicowane językowo i kulturowo</h1>
               <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#" class="btn btnD2">Więcej</a>
+              <a href="#"><button class="button1" type="button">Więcej</button></a>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -190,7 +187,7 @@
       </div>
     </div>
   </section>
-  <section class="contact" id="contact">
+  <section class="contact" id="kontakt">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -221,8 +218,8 @@
               <textarea class="form-control textarea" name="message" placeholder="Wiadomość"></textarea>
             </div>
             <div class="form-group text-center">
-              <button type="submit" name="submit" class="btn btnD1">Wyślij</button>
-            </div>
+              <button type="submit" name="submit" class=" glowing">Wyślij</button>
+          </div>
           </form>
         </div>
       </div>

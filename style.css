@@ -219,7 +219,8 @@ p {
 .blogpost {
   position: relative;
   width: 100%;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
 }
 .blogpost .imgBx {
   height: 400px;
@@ -240,15 +241,6 @@ p {
   padding: 0 0 10px;
   font-weight: 600;
   font-size: 1.5rem;
-}
-
-.btnD2,
-.btnD2:hover {
-  background: #262626;
-  color: #fff;
-  border-radius: 30px;
-  padding: 10px 20px;
-  float: right;
 }
 
 .contact {
@@ -421,7 +413,7 @@ footer {
 }
 
 .button1 {
-  margin-top: 320px;
+  margin-top: 280px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -429,10 +421,11 @@ footer {
 }
 
 .button1 {
+  margin-left: 170px;
   background: none;
-  color: #ccc;
-  width: 240px;
-  height: 80px;
+  color: #000;
+  width: 180px;
+  height: 60px;
   border: 1px solid #338033;
   font-size: 18px;
   border-radius: 4px;
@@ -688,4 +681,93 @@ footer {
 .box1 .content1 a:hover {
   color: #000;
   background: #fff;
+}
+.glowing{
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400px;
+  border-radius: 30px;
+  z-index: 1;
+}
+.glowing:hover{
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.glowing::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400px;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.glowing:hover:before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+.moving{
+  background: #060c21;
+  margin-top: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+.moving svg,
+.moving svg rect{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+}
+.moving svg rect{
+  stroke: #00e3ff;
+  stroke-width: 4;
+  transition: 2s;
+  stroke-dasharray: 60 200;
+  stroke-dashoffset: 320;
+}
+.moving:hover svg rect{
+  stroke-dasharray: 200 60;
+  stroke-dashoffset: 0;
+  stroke: #ff0;
 }
