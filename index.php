@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-<partial src="exampleIncludeFile.html" />
 <head>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <header>
