@@ -132,7 +132,7 @@
             <div class="content">
               <h1>Zróżnicowane językowo i kulturowo</h1>
               <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="blog_tut/index.php"><button class="button1" type="button">Więcej</button></a>
+              <a href="blog_tut"><button class="button1" type="button">Więcej</button></a>
               <div class="clearfix"></div>
             </div>
           </div>
