@@ -1,15 +1,59 @@
 
-				<!-- Footer -->
-                <section id="footer">
-						<ul class="icons">
-							<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-							<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-					</section>
+				<div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="icon">
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-google-plus" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-envelope" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+          <p style="text-align: center; margin-top: 15px; color: white;">
+            &#9400; Copyright 2020 Website Design by<a href="#"> Adam Podymniak<p>
+        </div>
+      </div>
+    </div>
 
 			</div>
 

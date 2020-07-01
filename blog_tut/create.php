@@ -19,12 +19,6 @@
 
 						<!-- Post -->
 							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Magna sed adipiscing</a></h2>
-										<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-									</div>
-								</header>
 								<div id="create_form">
 									<form action="create.php" method="POST">
 
@@ -45,13 +39,6 @@
 									<input type="submit" name="submit" id="submit" value="Publish" />
 									</form>
 								</div>
-								<footer>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul>
-								</footer>
 							</article>
 
 					</div>

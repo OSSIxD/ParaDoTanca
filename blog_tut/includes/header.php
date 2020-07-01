@@ -9,15 +9,15 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
-	<body class="single">
+	<body class="single" style="background-color: #060c21;">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="#">Blog</a></h1>
-						<nav class="links">
+						<h1><a href="#" style="color: white;">Blog</a></h1>
+						<nav class="links" style="color: white;">
 							<ul>
 								<li><a href="index.php">główna</a></li>
 								<li><a href="create.php">create post</a></li>

@@ -34,7 +34,7 @@ foreach ($rows as $row) {
 									</div>
 									<div class="meta">
 										<time class="published"><?php echo $entry->getDate(); ?></time>
-										<a href="#" class="author"><span class="name">><?php echo $entry->getAuthor(); ?></span><img src="images/avatar.jpg" alt="" /></a>
+										<a href="https://www.facebook.com/wodzireiDJ" target="_blank" class="author"><span class="name">><?php echo $entry->getAuthor(); ?></span><img src="images/avatar-blog.jpg" alt="" /></a>
 									</div>
 								</header>
 								<div class="excerpt">
@@ -42,31 +42,66 @@ foreach ($rows as $row) {
 								</div>
 								<footer>
 									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
+										<li><a href="single.php?entry_id=<?php echo $entry->getId(); ?>" class="button big">Czytaj</a></li>
 									</ul>
 								</footer>
 							</article>
 <?php } ?>
-				
-						
-						<!-- Footer -->
-							<section id="footer">
-								<ul class="icons">
-									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-									<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-								<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-							</section>
-
-					</section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="icon">
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-google-plus" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-envelope" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+          <p style="text-align: center; margin-top: 15px; color: white;">
+            &#9400; Copyright 2020 Website Design by<a href="#"> Adam Podymniak<p>
+        </div>
+      </div>
+    </div>
 
 			</div>
 
