@@ -1,4 +1,33 @@
 <?php
+
+    $conn = new mysqli('localhost', 'root', '', 'ratingSystem');
+
+    if (isset($_POST['save'])) {
+        $uID = $conn->real_escape_string($_POST['uID']);
+        $ratedIndex = $conn->real_escape_string($_POST['ratedIndex']);
+        $ratedIndex++;
+
+        if (!$uID) {
+            $conn->query("INSERT INTO stars (rateIndex) VALUES ('$ratedIndex')");
+            $sql = $conn->query("SELECT id FROM stars ORDER BY id DESC LIMIT 1");
+            $uData = $sql->fetch_assoc();
+            $uID = $uData['id'];
+        } else
+            $conn->query("UPDATE stars SET rateIndex='$ratedIndex' WHERE id='$uID'");
+
+        exit(json_encode(array('id' => $uID)));
+    }
+
+    $sql = $conn->query("SELECT id FROM stars");
+    $numR = $sql->num_rows;
+
+    $sql = $conn->query("SELECT SUM(rateIndex) AS total FROM stars");
+    $rData = $sql->fetch_array();
+    $total = $rData['total'];
+
+    $avg = $total / $numR;
+?>
+<?php
 session_start();
 
 $loggedIn = false;
@@ -22,9 +51,7 @@ function createCommentRow($data, $isReply = false) {
                 <div class="user">'.$data['name'].' <span class="time timeago" data-date="'.$data['createdOn'].'"></span></div>
                 <div class="userComment">'.$data['comment'].'</div>
                 <div class="reply">
-                    <i class="fas fa-thumbs-up" data-isReply="'.$isReply.'" onclick="react(this,'.$data['id'].', \'up\')"></i>
-                    <i class="fas fa-thumbs-down" data-isReply="'.$isReply.'" onclick="react(this,'.$data['id'].', \'down\')"></i>
-                    <a href="javascript:void(0)" data-commentID="'.$data['id'].'" onclick="reply(this)">REPLY</a>
+                    <a href="javascript:void(0)" data-commentID="'.$data['id'].'" onclick="reply(this)">Odpowiedz</a>
                 </div>
                 <div class="replies">';
 
@@ -129,43 +156,34 @@ $numComments = $sqlNumComments->num_rows;
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YouTube Comment System</title>
+    <title>Para do Tańca - oceń nas!</title>
     <link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/solid.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <!-- Wrapper -->
 			<div id="wrapper">
 
-<!-- Header -->
-    <header id="header">
-        <h1><a href="#">Blog</a></h1>
-        <nav class="links">
-            <ul>
-                <li><a href="index.php">główna</a></li>
-                <li><a href="create.php">create post</a></li>
-                <li><a href="comments.php">oceń nas!</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php require_once 'includes/header.php'; ?>
 
 <div class="modal" id="registerModal">
     <div class="modal-dialog" style="margin-top: 70px;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Registration Form</h5>
+                <h5 class="modal-title">rejestracja</h5>
             </div>
             <div class="modal-body">
-                <input type="text" id="userName" class="form-control" placeholder="Your Name">
-                <input type="email" id="userEmail" class="form-control" placeholder="Your Email">
-                <input type="password" id="userPassword" class="form-control" placeholder="Password">
+                <input type="text" id="userName" class="form-control" placeholder="Imię">
+                <input type="email" id="userEmail" class="form-control" placeholder="Email">
+                <input type="password" id="userPassword" class="form-control" placeholder="Hasło">
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="registerBtn">Register</button>
-                <button class="btn btn-default" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary" id="registerBtn">Zarejestruj</button>
+                <button class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
         </div>
     </div>
@@ -175,15 +193,15 @@ $numComments = $sqlNumComments->num_rows;
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Log In Form</h5>
+                <h5 class="modal-title">Logowanie</h5>
             </div>
             <div class="modal-body">
-                <input type="email" id="userLEmail" class="form-control" placeholder="Your Email">
-                <input type="password" id="userLPassword" class="form-control" placeholder="Password">
+                <input type="email" id="userLEmail" class="form-control" placeholder="Email">
+                <input type="password" id="userLPassword" class="form-control" placeholder="Hasło">
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="loginBtn">Log In</button>
-                <button class="btn btn-default" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary" id="loginBtn">Zaloguj</button>
+                <button class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
         </div>
     </div>
@@ -195,25 +213,34 @@ $numComments = $sqlNumComments->num_rows;
             <?php
             if (!$loggedIn)
                 echo '
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register</button>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#logInModal">Log In</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Zarejestruj</button>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#logInModal">Zaloguj</button>
                 ';
             else
                 echo '
-                    <a href="logout.php" class="btn btn-warning">Log Out</a>
+                    <a href="logout.php" class="btn btn-warning">Wyloguj</a>
                 ';
             ?>
         </div>
     </div>
+    <div align="center" style="background: #000; padding: 50px;color:white;">
+        <i class="fa fa-star fa-2x" data-index="0"></i>
+        <i class="fa fa-star fa-2x" data-index="1"></i>
+        <i class="fa fa-star fa-2x" data-index="2"></i>
+        <i class="fa fa-star fa-2x" data-index="3"></i>
+        <i class="fa fa-star fa-2x" data-index="4"></i>
+        <br><br>
+        <?php echo round($avg,2) ?>
+    </div>
     <div class="row">
         <div class="col-md-12">
-            <textarea class="form-control" id="mainComment" placeholder="Add Public Comment" cols="30" rows="2"></textarea><br>
-            <button style="float:right" class="btn-primary btn" onclick="isReply = false;" id="addComment">Add Comment</button>
+            <textarea class="form-control" id="mainComment" placeholder="Odpowiedz" cols="30" rows="2"></textarea><br>
+            <button style="float:right" class="btn-primary btn" onclick="isReply = false;" id="addComment">Dodaj ocenę</button>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h2><b id="numComments"><?php echo $numComments ?> Comments</b></h2>
+            <h2><b id="numComments" style="color: white;">Oceny: <?php echo $numComments ?></b></h2>
             <div class="userComments">
 
             </div>
@@ -223,9 +250,9 @@ $numComments = $sqlNumComments->num_rows;
 
 <div class="row replyRow" style="display:none">
     <div class="col-md-12">
-        <textarea class="form-control" id="replyComment" placeholder="Add Public Comment" cols="30" rows="2"></textarea><br>
-        <button style="float:right" class="btn-primary btn" onclick="isReply = true;" id="addReply">Add Reply</button>
-        <button style="float:right" class="btn-default btn" onclick="$('.replyRow').hide();">Close</button>
+        <textarea class="form-control" id="replyComment" placeholder=Odpowiedz cols="30" rows="2"></textarea><br>
+        <button style="float:right" class="btn-primary btn" onclick="isReply = true;" id="addReply">Odpowiedz</button>
+        <button style="float:right" class="btn-default btn" onclick="$('.replyRow').hide();">Zamknij</button>
     </div>
 </div>
 
@@ -388,5 +415,62 @@ $numComments = $sqlNumComments->num_rows;
         });
     }
 </script>
+<script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script>
+        var ratedIndex = -1, uID = 0;
+
+        $(document).ready(function () {
+            resetStarColors();
+
+            if (localStorage.getItem('ratedIndex') != null) {
+                setStars(parseInt(localStorage.getItem('ratedIndex')));
+                uID = localStorage.getItem('uID');
+            }
+
+            $('.fa-star').on('click', function () {
+               ratedIndex = parseInt($(this).data('index'));
+               localStorage.setItem('ratedIndex', ratedIndex);
+               saveToTheDB();
+            });
+
+            $('.fa-star').mouseover(function () {
+                resetStarColors();
+                var currentIndex = parseInt($(this).data('index'));
+                setStars(currentIndex);
+            });
+
+            $('.fa-star').mouseleave(function () {
+                resetStarColors();
+
+                if (ratedIndex != -1)
+                    setStars(ratedIndex);
+            });
+        });
+
+        function saveToTheDB() {
+            $.ajax({
+               url: "index.php",
+               method: "POST",
+               dataType: 'json',
+               data: {
+                   save: 1,
+                   uID: uID,
+                   ratedIndex: ratedIndex
+               }, success: function (r) {
+                    uID = r.id;
+                    localStorage.setItem('uID', uID);
+               }
+            });
+        }
+
+        function setStars(max) {
+            for (var i=0; i <= max; i++)
+                $('.fa-star:eq('+i+')').css('color', 'green');
+        }
+
+        function resetStarColors() {
+            $('.fa-star').css('color', 'white');
+        }
+    </script>
 </body>
 </html>
