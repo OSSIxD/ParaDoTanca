@@ -470,7 +470,7 @@ $numComments = $sqlNumComments->num_rows;
 
         function saveToTheDB() {
             $.ajax({
-               url: "index.php",
+               url: "blog.php",
                method: "POST",
                dataType: 'json',
                data: {

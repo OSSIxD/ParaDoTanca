@@ -19,7 +19,7 @@
 						<h1><a href="#" style="color: white;">Para do Tańca</a></h1>
 						<nav class="links" style="color: white;">
 							<ul>
-								<li><a href="index.php">główna</a></li>
+								<li><a href="blog.php">główna</a></li>
 								<li><a href="create.php">create post</a></li>
 								<li><a href="comments.php">oceń nas!</a></li>
 							</ul>
