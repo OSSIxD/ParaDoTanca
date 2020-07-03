@@ -19,9 +19,6 @@
               <a class="nav-link" href="#oferta">Oferta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#o-nas">O Nas</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
@@ -94,97 +91,21 @@
         </div>
       </div>
     </div>
-  <section class="sec2" id="o-nas">
+  <section class="sec2" id="blog">
     <div class="container h100">
       <div class="contentBox h100">
         <div>
-          <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">O Nas</h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Blog</h2>
           <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów
             Zjednoczonych przez około 10 tys. lat. Przed przybyciem Europejczyków i, co za tym idzie, sprowadzeniu siłowo przez nich na te ziemie pojmanych w Afryce Zachodniej i zniewolonych Afrykanów do pracy na plantacjach, populacja autochtonów
             stanowiła ponad 1 mln mieszkańców.</p>
-                <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-                  <div class="moving"><svg><rect></rect></svg>Więcej
+                <a href="blog_tut" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                  <div class="moving"><svg><rect></rect></svg>Przejdź
               </div>
               </a>
               </div>
         </div>
       </div>
-  </section>
-  <section class="blog" id="blog">
-    <div class="container">
-      <div class="row">
-        <div class="offset-sm-2 col-sm-8">
-          <div class="headerText text-center">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Ostatnie Posty</h2>
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów
-              Zjednoczonych przez około 10 tys. lat. Przed przybyciem Europejczyków i, co za tym idzie, sprowadzeniu siłowo przez nich na te ziemie pojmanych w Afryce Zachodniej i zniewolonych Afrykanów do pracy na plantacjach, populacja autochtonów
-              stanowiła ponad 1 mln mieszkańców.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <div class="boxcolor" style="background: linear-gradient(315deg, #89ff00, #00bcd4);">
-          <div class="blogpost">
-            <div class="imgBx">
-              <img src="assety/bg3.jpg" class="img-fluid">
-            </div>
-            <div class="content">
-              <h1>Zróżnicowane językowo i kulturowo</h1>
-              <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="blog_tut"><button class="button1" type="button">Więcej</button></a>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <div class="boxcolor" style="background: linear-gradient(315deg, #ff0057, #e64a19);">
-          <div class="blogpost">
-            <div class="imgBx">
-              <img src="assety/bg1.jfif" class="img-fluid">
-            </div>
-            <div class="content">
-              <h1>Zróżnicowane językowo i kulturowo</h1>
-              <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#"><button class="button1" type="button">Więcej</button></a>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <div class="boxcolor" style="background: linear-gradient(315deg, #e91e63, #5d02ff);">
-          <div class="blogpost">
-            <div class="imgBx">
-              <img src="assety/bg2.gif" class="img-fluid">
-            </div>
-            <div class="content">
-              <h1>Zróżnicowane językowo i kulturowo</h1>
-              <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#"><button class="button1" type="button">Więcej</button></a>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <div class="boxcolor" style="background: linear-gradient(315deg, #ff0000, #ffc107);">
-          <div class="blogpost">
-            <div class="imgBx">
-              <img src="assety/bg4.jpg" class="img-fluid">
-            </div>
-            <div class="content">
-              <h1>Zróżnicowane językowo i kulturowo</h1>
-              <p>Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów Zjednoczonych przez około 10 tys...</p>
-              <a href="#"><button class="button1" type="button">Więcej</button></a>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
   <section class="contact" id="kontakt">
     <div class="container">

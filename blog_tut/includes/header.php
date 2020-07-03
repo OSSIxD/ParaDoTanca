@@ -16,7 +16,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="#" style="color: white;">Blog</a></h1>
+						<h1><a href="#" style="color: white;">Para do Tańca</a></h1>
 						<nav class="links" style="color: white;">
 							<ul>
 								<li><a href="index.php">główna</a></li>

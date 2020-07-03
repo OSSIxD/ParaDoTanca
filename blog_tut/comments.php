@@ -103,8 +103,12 @@ if (isset($_POST['register'])) {
         if ($sql->num_rows > 0)
             exit('failedUserExists');
         else {
+            $token = 'qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM0123456789!$/()*';
+            $token = str_shuffle($token);
+            $token = substr($token, 0, 10);
+
             $ePassword = password_hash($password, PASSWORD_BCRYPT);
-            $conn->query("INSERT INTO users (name,email,password,createdOn) VALUES ('$name', '$email', '$ePassword', NOW())");
+            $conn->query("INSERT INTO users (name,email,password,createdOn,isEmailConfirmed,token) VALUES ('$name', '$email', '$ePassword', '0', '$token', NOW())");
 
             $sql = $conn->query("SELECT id FROM users ORDER BY id DESC LIMIT 1");
             $data = $sql->fetch_assoc();
@@ -114,6 +118,23 @@ if (isset($_POST['register'])) {
             $_SESSION['email'] = $email;
             $_SESSION['userID'] = $data['id'];
 
+            include_once "PHPMailer/PHPMailer.php";
+
+                $mail = new PHPMailer();
+                $mail->setFrom('agpodymniak@gmail.com');
+                $mail->addAddress($email, $name);
+                $mail->Subject = "Please verify email!";
+                $mail->isHTML(true);
+                $mail->Body = "
+                    Please click on the link below:<br><br>
+                    
+                    <a href='http://codingpassiveincome.com/PHPEmailConfirmation/confirm.php?email=$email&token=$token'>Click Here</a>
+                ";
+
+                if ($mail->send())
+                    $msg = "You have been registered! Please verify your email!";
+                else
+                    $msg = "Something wrong happened! Please try again!";
             exit('success');
         }
     } else
