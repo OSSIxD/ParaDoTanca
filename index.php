@@ -99,7 +99,7 @@
           <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Zróżnicowane językowo i kulturowo, wojujące pomiędzy sobą ludy tubylczych Amerykanów, w tym stosunkowo mniej rozszczepieni Inuici, zamieszkiwały obszary dzisiejszych Stanów
             Zjednoczonych przez około 10 tys. lat. Przed przybyciem Europejczyków i, co za tym idzie, sprowadzeniu siłowo przez nich na te ziemie pojmanych w Afryce Zachodniej i zniewolonych Afrykanów do pracy na plantacjach, populacja autochtonów
             stanowiła ponad 1 mln mieszkańców.</p>
-                <a href="blog_tut" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <a href="blog.php" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                   <div class="moving"><svg><rect></rect></svg>Przejdź
               </div>
               </a>
@@ -197,7 +197,7 @@
             </li>
           </ul>
           <p class="crypt">
-            &#9400; Copyright 2020 Website Design by<a href="#"> Adam Podymniak<p>
+            &#9400; Copyright 2020 Website Design by<a href="easteregg.php"> Adam Podymniak<p>
         </div>
       </div>
     </div>

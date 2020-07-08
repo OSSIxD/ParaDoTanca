@@ -1,33 +1,4 @@
 <?php
-
-    $conn = new mysqli('localhost', 'root', '', 'ratingSystem');
-
-    if (isset($_POST['save'])) {
-        $uID = $conn->real_escape_string($_POST['uID']);
-        $ratedIndex = $conn->real_escape_string($_POST['ratedIndex']);
-        $ratedIndex++;
-
-        if (!$uID) {
-            $conn->query("INSERT INTO stars (rateIndex) VALUES ('$ratedIndex')");
-            $sql = $conn->query("SELECT id FROM stars ORDER BY id DESC LIMIT 1");
-            $uData = $sql->fetch_assoc();
-            $uID = $uData['id'];
-        } else
-            $conn->query("UPDATE stars SET rateIndex='$ratedIndex' WHERE id='$uID'");
-
-        exit(json_encode(array('id' => $uID)));
-    }
-
-    $sql = $conn->query("SELECT id FROM stars");
-    $numR = $sql->num_rows;
-
-    $sql = $conn->query("SELECT SUM(rateIndex) AS total FROM stars");
-    $rData = $sql->fetch_array();
-    $total = $rData['total'];
-
-    $avg = $total / $numR;
-?>
-<?php
 session_start();
 
 $loggedIn = false;
@@ -171,7 +142,7 @@ $sqlNumComments = $conn->query("SELECT id FROM comments");
 $numComments = $sqlNumComments->num_rows;
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -244,31 +215,23 @@ $numComments = $sqlNumComments->num_rows;
             ?>
         </div>
     </div>
-    <div align="center" style="background: #000; padding: 50px;color:white;">
-        <i class="fa fa-star fa-2x" data-index="0"></i>
-        <i class="fa fa-star fa-2x" data-index="1"></i>
-        <i class="fa fa-star fa-2x" data-index="2"></i>
-        <i class="fa fa-star fa-2x" data-index="3"></i>
-        <i class="fa fa-star fa-2x" data-index="4"></i>
-        <br><br>
-        <?php echo round($avg,2) ?>
-    </div>
+    
+    <?php require_once 'rate.php'; ?>
     <div class="row">
         <div class="col-md-12">
             <textarea class="form-control" id="mainComment" placeholder="Odpowiedz" cols="30" rows="2"></textarea><br>
             <button style="float:right" class="btn-primary btn" onclick="isReply = false;" id="addComment">Dodaj ocenę</button>
         </div>
-    </div>
+    </>
     <div class="row">
         <div class="col-md-12">
             <h2><b id="numComments" style="color: white;">Oceny: <?php echo $numComments ?></b></h2>
-            <div class="userComments">
+            <div class="userComments" style="color: white;">
 
             </div>
         </div>
     </div>
 </div>
-
 <div class="row replyRow" style="display:none">
     <div class="col-md-12">
         <textarea class="form-control" id="replyComment" placeholder=Odpowiedz cols="30" rows="2"></textarea><br>
@@ -436,62 +399,5 @@ $numComments = $sqlNumComments->num_rows;
         });
     }
 </script>
-<script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script>
-        var ratedIndex = -1, uID = 0;
-
-        $(document).ready(function () {
-            resetStarColors();
-
-            if (localStorage.getItem('ratedIndex') != null) {
-                setStars(parseInt(localStorage.getItem('ratedIndex')));
-                uID = localStorage.getItem('uID');
-            }
-
-            $('.fa-star').on('click', function () {
-               ratedIndex = parseInt($(this).data('index'));
-               localStorage.setItem('ratedIndex', ratedIndex);
-               saveToTheDB();
-            });
-
-            $('.fa-star').mouseover(function () {
-                resetStarColors();
-                var currentIndex = parseInt($(this).data('index'));
-                setStars(currentIndex);
-            });
-
-            $('.fa-star').mouseleave(function () {
-                resetStarColors();
-
-                if (ratedIndex != -1)
-                    setStars(ratedIndex);
-            });
-        });
-
-        function saveToTheDB() {
-            $.ajax({
-               url: "blog.php",
-               method: "POST",
-               dataType: 'json',
-               data: {
-                   save: 1,
-                   uID: uID,
-                   ratedIndex: ratedIndex
-               }, success: function (r) {
-                    uID = r.id;
-                    localStorage.setItem('uID', uID);
-               }
-            });
-        }
-
-        function setStars(max) {
-            for (var i=0; i <= max; i++)
-                $('.fa-star:eq('+i+')').css('color', 'green');
-        }
-
-        function resetStarColors() {
-            $('.fa-star').css('color', 'white');
-        }
-    </script>
 </body>
 </html>
