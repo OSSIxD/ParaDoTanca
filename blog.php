@@ -46,6 +46,7 @@ foreach ($rows as $row) {
 									</ul>
 								</footer>
 							</article>
+              
 <?php } ?>
     <div class="container">
       <div class="row">
