@@ -1,4 +1,7 @@
 <?php
+    error_reporting(0);
+?>
+<?php
 session_start();
 
 $loggedIn = false;
@@ -174,7 +177,7 @@ $numComments = $sqlNumComments->num_rows;
                 <input type="password" id="userPassword" class="form-control" placeholder="Hasło">
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="registerBtn">Zarejestruj</button>
+                <button class="btn btn-default" id="registerBtn">Zarejestruj</button>
                 <button class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
         </div>
@@ -183,7 +186,7 @@ $numComments = $sqlNumComments->num_rows;
 
 <div class="modal" id="logInModal">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="margin-top:80px;">
             <div class="modal-header">
                 <h5 class="modal-title">Logowanie</h5>
             </div>
@@ -192,7 +195,7 @@ $numComments = $sqlNumComments->num_rows;
                 <input type="password" id="userLPassword" class="form-control" placeholder="Hasło">
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="loginBtn">Zaloguj</button>
+                <button class="btn btn-default" id="loginBtn">Zaloguj</button>
                 <button class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
         </div>
@@ -205,12 +208,12 @@ $numComments = $sqlNumComments->num_rows;
             <?php
             if (!$loggedIn)
                 echo '
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Zarejestruj</button>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#logInModal">Zaloguj</button>
+                        <button class="btn btn-default" data-toggle="modal" data-target="#registerModal">Zarejestruj</button>
+                        <button class="btn btn-default" data-toggle="modal" data-target="#logInModal">Zaloguj</button>
                 ';
             else
                 echo '
-                    <a href="logout.php" class="btn btn-warning">Wyloguj</a>
+                    <a href="logout.php" class="btn btn-default">Wyloguj</a>
                 ';
             ?>
         </div>
@@ -220,7 +223,7 @@ $numComments = $sqlNumComments->num_rows;
     <div class="row">
         <div class="col-md-12">
             <textarea class="form-control" id="mainComment" placeholder="Odpowiedz" cols="30" rows="2"></textarea><br>
-            <button style="float:right" class="btn-primary btn" onclick="isReply = false;" id="addComment">Dodaj ocenę</button>
+            <button style="float:right" class="btn-default btn" onclick="isReply = false;" id="addComment">Dodaj ocenę</button>
         </div>
     <div class="row">
         <div class="col-md-12">
@@ -234,7 +237,7 @@ $numComments = $sqlNumComments->num_rows;
 <div class="row replyRow" style="display:none">
     <div class="col-md-12">
         <textarea class="form-control" id="replyComment" placeholder=Odpowiedz cols="30" rows="2"></textarea><br>
-        <button style="float:right" class="btn-primary btn" onclick="isReply = true;" id="addReply">Odpowiedz</button>
+        <button style="float:right" class="btn-default btn" onclick="isReply = true;" id="addReply">Odpowiedz</button>
         <button style="float:right" class="btn-default btn" onclick="$('.replyRow').hide();">Zamknij</button>
     </div>
 </div>
@@ -283,7 +286,7 @@ $numComments = $sqlNumComments->num_rows;
                     }
                 });
             } else
-                alert('Please Check Your Inputs');
+                alert('Proszę sprawdzić wpisane dane!');
         });
 
         $("#registerBtn").on('click', function () {
@@ -303,15 +306,15 @@ $numComments = $sqlNumComments->num_rows;
                         password: password
                     }, success: function (response) {
                         if (response === 'failedEmail')
-                            alert('Please insert valid email address!');
+                            alert('Proszę wpisać poprawny adres email!');
                         else if (response === 'failedUserExists')
-                            alert('User with this email already exists!');
+                            alert('Użytkownik z tym emailem już istnieje!');
                         else
                             window.location = window.location;
                     }
                 });
             } else
-                alert('Please Check Your Inputs');
+                alert('Proszę sprawdzić wpisane dane!');
         });
 
         $("#loginBtn").on('click', function () {
@@ -329,13 +332,13 @@ $numComments = $sqlNumComments->num_rows;
                         password: password
                     }, success: function (response) {
                         if (response === 'failed')
-                            alert('Please check your login details!');
+                            alert('Proszę sprawdzić dane logowania!');
                         else
                             window.location = window.location;
                     }
                 });
             } else
-                alert('Please Check Your Inputs');
+                alert('Proszę sprawdzić wpisane dane!');
         });
 
         getAllComments(0, max);

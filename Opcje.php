@@ -29,7 +29,6 @@
           <h2>01</h2>
           <h3>Wesela</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="wesela.php">Przejdź</a>
         </div>
       </div>
       <div class="box1">
@@ -38,7 +37,6 @@
           <h2>02</h2>
           <h3>Urodziny</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
     </div>
@@ -47,7 +45,6 @@
           <h2>03</h2>
           <h3>Komunie</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
     </div>
@@ -60,7 +57,6 @@
           <h2>04</h2>
           <h3>Imprezy Firmowe</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
       <div class="box1">
@@ -68,7 +64,6 @@
           <h2>05</h2>
           <h3>Rocznice Rodzinne</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
       <div class="box1">
@@ -76,7 +71,6 @@
           <h2>06</h2>
           <h3>Dyskoteki Szkolne</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
     </div>
@@ -89,7 +83,6 @@
           <h2>07</h2>
           <h3>Festyny</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
       <div class="box1">
@@ -97,7 +90,6 @@
           <h2>08</h2>
           <h3>Prymicje</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
       <div class="box1">
@@ -105,7 +97,6 @@
           <h2>09</h2>
           <h3>Wesela Bezalkocholowe</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="Opcje.php">Przejdź</a>
         </div>
       </div>
     </div>
