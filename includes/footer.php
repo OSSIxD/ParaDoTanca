@@ -50,7 +50,7 @@
             </li>
           </ul>
           <p style="text-align: center; margin-top: 15px; color: white;">
-            &#9400; Copyright 2020 Website Design by<a href="#"> Adam Podymniak<p>
+            &#9400; Copyright 2020 Website Design by<a href="easteregg.php"> Adam Podymniak<p>
         </div>
       </div>
     </div>

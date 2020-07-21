@@ -143,3 +143,122 @@ body {
   color: #000;
   background: #fff;
 }
+.icon {
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.icon li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+}
+
+.icon li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px !important;
+}
+
+.icon li:hover span {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.icon li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+.icon li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+
+.icon li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+
+.icon li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: .6;
+}
+
+.icon li:hover span:nth-child(1) {
+  transform: translate(0, 0);
+  opacity: .2;
+}
+
+.icon li:nth-child(1) span {
+  background: #3b5999;
+}
+
+.icon li:nth-child(2) span {
+  background: #55acee;
+}
+
+.icon li:nth-child(3) span {
+  background: #dd4b39;
+}
+
+.icon li:nth-child(5) span {
+  background: #0077B5;
+}
+
+.icon li:nth-child(4) span {
+  background: #e4405f;
+}
+footer {
+  background: #060c21;
+  padding: 50px 0 0;
+}
+
+.sci {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.sci li a {
+  color: #777;
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  color: #fff;
+}
+
+.crypt {
+  margin-top: 20px;
+  text-align: center;
+  color: #777;
+}
+
+.crypt a,
+.crypt a:hover {
+  color: #fff;
+}

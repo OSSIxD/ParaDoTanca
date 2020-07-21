@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Opcje.css" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wybór Ofert</title>
 </head>
@@ -110,5 +111,62 @@
     </div>
   </div>
   </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="icon">
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-google-plus" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-envelope" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+          <p class="crypt">
+            &#9400; Copyright 2020 Website Design by<a href="easteregg.php"> Adam Podymniak<p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
